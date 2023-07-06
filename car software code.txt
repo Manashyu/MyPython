@@ -1,0 +1,23 @@
+user_command =''
+started = False
+while True:
+    user_command = str.upper(input('>>>'))
+    if user_command == 'HELP':
+        print('start - to start the car\nstop - to stop the car\nquit - to exit')
+    elif user_command == 'START' :
+        if started :
+            print('CAr already started')
+        else :
+            started = True
+            print('Car Started...Ready to go !')
+    elif user_command == 'STOP':
+        if not started :
+            print('Car already stopped.')
+        else :
+            started = False
+            print('Car stopped')
+
+    elif user_command == 'QUIT':
+        break
+    else:
+        print('Sorry, I dont understand that command')
